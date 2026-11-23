@@ -9,7 +9,7 @@
 **Mata kuliah:** Teknologi Open Source
 
 ## Deskripsi
-Workflow ini memvalidasi sintaks file docker-compose.yml (stack WordPress + MariaDB) secara otomatis. Workflow berjalan setiap ada push ke branch main dan setiap ada Pull Request.
+Workflow ini memvalidasi sintaks file docker-compose.yml (stack WordPress + MariaDB) secara otomatis, lalu menjalankan stack-nya sebentar untuk memastikan container bisa hidup. Workflow berjalan setiap ada push ke branch main dan setiap ada Pull Request.
 
 ## Isi repositori
 - .github/workflows/compose-check.yml : workflow CI
@@ -48,6 +48,10 @@ Step 4 sampai 6 adalah step bonus.
 5. Riwayat run di tab Actions (merah lalu hijau)
 
    ![Riwayat run](bukti/6-riwayat-run.png)
+
+6. Run bonus (up, ps, down) hijau
+
+   ![Bonus](bukti/4-bonus-hijau.png)
 
 Tautan Pull Request (sudah hijau dan di-merge): https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/pull/1
 
