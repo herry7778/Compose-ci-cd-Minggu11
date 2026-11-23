@@ -19,7 +19,7 @@ Workflow ini memvalidasi sintaks file docker-compose.yml (stack WordPress + Mari
 - bukti/ : tangkapan layar bukti pengerjaan
 
 ## Cara kerja workflow
-Pemicunya adalah event push ke branch main dan pull_request. Workflow punya satu job bernama validate yang berjalan di runner ubuntu-latest. Job ini punya tiga step: 
+Pemicunya adalah event push ke branch main dan pull_request. Workflow punya satu job bernama validate yang berjalan di runner ubuntu-latest. Job ini punya enam step: 
 (1) checkout untuk mengambil kode repo ke runner
 (2) menyalin .env.example menjadi .env karena file .env asli tidak ada di repo
 (3) menjalankan docker compose config -q untuk memeriksa sintaks file Compose tanpa menjalankan container.
