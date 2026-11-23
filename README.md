@@ -1,11 +1,8 @@
 # Compose-ci-cd-Minggu11
 # Tugas Minggu 11: CI untuk Repo Compose
 
-![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11.git)
-![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/actions/runs/45124654881)
-![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/actions/runs/45125476337)
-![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/actions/runs/45125740191)
-![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/actions/runs/45125790962)
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/9b1a6627-51bf-48aa-9559-5b848a203f06" />
+
 
 **Nama:** Nadya Shafwah Mujahidin
 **NIM:** 202557201048
