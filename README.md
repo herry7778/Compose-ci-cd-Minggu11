@@ -1,6 +1,8 @@
 # Compose-ci-cd-Minggu11
 # Tugas Minggu 11: CI untuk Repo Compose
 
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/6723fae9-1a69-4f0d-9cdb-b37ddd89be6f" />
+
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/9b1a6627-51bf-48aa-9559-5b848a203f06" />
 
 
