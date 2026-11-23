@@ -5,6 +5,8 @@
 
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/9b1a6627-51bf-48aa-9559-5b848a203f06" />
 
+![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/actions/workflows/compose-check.yml/badge.svg)
+
 
 **Nama:** Nadya Shafwah Mujahidin
 **NIM:** 202557201048
