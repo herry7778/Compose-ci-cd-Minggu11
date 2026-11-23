@@ -41,17 +41,17 @@ Step 4 sampai 6 adalah step bonus.
 
    ![Badge](bukti/3-badge.png)
 
-4. Pull Request sudah di-merge
+4. Run bonus (up, ps, down) hijau
+
+   ![Bonus](bukti/4-bonus-hijau.png)
+5. Pull Request sudah di-merge
 
    ![PR merged](bukti/5-pr-merged.png)
 
-5. Riwayat run di tab Actions (merah lalu hijau)
+6. Riwayat run di tab Actions (merah lalu hijau)
 
    ![Riwayat run](bukti/6-riwayat-run.png)
 
-6. Run bonus (up, ps, down) hijau
-
-   ![Bonus](bukti/4-bonus-hijau.png)
 
 Tautan Pull Request (sudah hijau dan di-merge): https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/pull/1
 
@@ -60,7 +60,7 @@ Tautan Pull Request (sudah hijau dan di-merge): https://github.com/satnurz85-web
 
 **Kendala 2: konflik pada README.** README saya diedit lewat web GitHub dan juga lewat terminal, sehingga git menyisakan penanda konflik di dalam file. Saya memperbaikinya dengan menghapus baris penanda dan menyisakan satu badge, lalu commit ulang.
 
-**Kendala 3: check Pull Request berwarna merah.** TEMPEL_PESAN_ERROR_ASLI_DARI_LOG. Penyebabnya adalah indentasi baris image: kurang satu spasi sehingga YAML tidak valid. Saya mengembalikan indentasi, commit, lalu push ke branch yang sama sampai check menjadi hijau.
+**Kendala 3: check Pull Request berwarna merah.**  Compose Check / validate. Penyebabnya adalah indentasi baris image: kurang satu spasi sehingga YAML tidak valid. Saya mengembalikan indentasi, commit, lalu push ke branch yang sama sampai check menjadi hijau.
 
 ## Refleksi singkat
 CI membuat kesalahan pada file Compose ketahuan beberapa menit setelah push, sebelum digabung ke main. Dengan begitu saya tidak perlu mengandalkan ingatan untuk memeriksa file secara manual. Hasil hijau atau merah juga terlihat jelas di PR, sehingga perubahan yang rusak tidak ikut ter-merge.
