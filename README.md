@@ -2,9 +2,9 @@
 
 ![CI](https://github.com/herry7778/Compose-ci-cd-Minggu11/actions/workflows/compose-check.yml/badge.svg)
 
-**Nama:** Nadya Shafwah Mujahidin
+**Nama:** Hery Kurniawan
 
-**NIM:** 202557201048
+**NIM:** 202557201043
 
 **Mata kuliah:** Teknologi Open Source
 
