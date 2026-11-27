@@ -1,6 +1,6 @@
 # Tugas Minggu 11: CI untuk Repo Compose
 
-![CI](https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/actions/workflows/compose-check.yml/badge.svg)
+![CI](https://github.com/herry7778/Compose-ci-cd-Minggu11/actions/workflows/compose-check.yml/badge.svg)
 
 **Nama:** Nadya Shafwah Mujahidin
 
@@ -53,7 +53,7 @@ Step 4 sampai 6 adalah step bonus.
    ![Riwayat run](bukti/6-riwayat-run.png)
 
 
-Tautan Pull Request (sudah hijau dan di-merge): https://github.com/satnurz85-web/Compose-ci-cd-Minggu11/pull/1
+Tautan Pull Request (sudah hijau dan di-merge): https://github.com/herry7778/Compose-ci-cd-Minggu11/pull/1
 
 ## Kendala dan cara mengatasinya
 **Kendala 1: peringatan variable is not set.** Saat menjalankan docker compose config -q muncul pesan: WARN[0000] The "MYSQL_ROOT_PASSWORD" variable is not set. Defaulting to a blank string. Penyebabnya, .env.example memakai nama variabel DB_NAME, DB_USER, DB_PASSWORD, dan DB_ROOT_PASSWORD, sedangkan docker-compose.yml memanggil MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD, dan MYSQL_ROOT_PASSWORD. Saya memperbaikinya dengan menulis ulang .env.example memakai nama MYSQL_..., menyalinnya lagi menjadi .env, lalu warning hilang.
