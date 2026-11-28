@@ -56,12 +56,10 @@ Step 4 sampai 6 adalah step bonus.
 Tautan Pull Request (sudah hijau dan di-merge): https://github.com/herry7778/Compose-ci-cd-Minggu11/pull/1
 
 ## Kendala dan cara mengatasinya
-**Kendala 1: peringatan variable is not set.** Saat menjalankan docker compose config -q muncul pesan: WARN[0000] The "MYSQL_ROOT_PASSWORD" variable is not set. Defaulting to a blank string. Penyebabnya, .env.example memakai nama variabel DB_NAME, DB_USER, DB_PASSWORD, dan DB_ROOT_PASSWORD, sedangkan docker-compose.yml memanggil MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD, dan MYSQL_ROOT_PASSWORD. Saya memperbaikinya dengan menulis ulang .env.example memakai nama MYSQL_..., menyalinnya lagi menjadi .env, lalu warning hilang.
+**Kendala 1: check Pull Request berwarna merah.** Pada PR uji-gagal, check Compose Check / validate berstatus Failing karena indentasi baris image: pada docker-compose.yml sengaja dikurangi satu spasi sehingga YAML tidak valid. Saya mengembalikan indentasi, commit, lalu push ke branch yang sama sampai check menjadi hijau, kemudian PR di-merge.
 
-**Kendala 2: konflik pada README.** README saya diedit lewat web GitHub dan juga lewat terminal, sehingga git menyisakan penanda konflik di dalam file. Saya memperbaikinya dengan menghapus baris penanda dan menyisakan satu badge, lalu commit ulang.
+**Kendala 2: git pull gagal karena divergent branches.** Saat git pull muncul pesan "Need to specify how to reconcile divergent branches" karena ada commit lokal yang belum di-push, sedangkan di GitHub sudah ada commit hasil merge PR. Saya mengatasinya dengan git pull --rebase, lalu push ke main.
 
-**Kendala 3: check Pull Request berwarna merah.**  Compose Check / validate. Penyebabnya adalah indentasi baris image: kurang satu spasi sehingga YAML tidak valid. Saya mengembalikan indentasi, commit, lalu push ke branch yang sama sampai check menjadi hijau.
-
+**Kendala 3: run pertama workflow gagal di branch main.** Setelah file compose-check.yml pertama kali di-push, run "Tambah CI validasi Compose" berstatus Failing (merah) di tab Actions. Saya membuka log run tersebut untuk melihat step yang gagal, memperbaiki file workflow, lalu push ulang dengan commit "Perbaiki workflow compose-check". Run berikutnya berstatus hijau, sehingga workflow bisa dipakai untuk memvalidasi docker-compose.yml.
 ## Refleksi singkat
-CI membuat kesalahan pada file Compose ketahuan beberapa menit setelah push, sebelum digabung ke main. Dengan begitu saya tidak perlu mengandalkan ingatan untuk memeriksa file secara manual. Hasil hijau atau merah juga terlihat jelas di PR, sehingga perubahan yang rusak tidak ikut ter-merge.
-
+CI membuat kesalahan pada file Compose langsung ketahuan setelah push, sebelum digabung ke main, sehingga saya tidak perlu memeriksa file secara manual. Dari PR yang merah lalu hijau, saya belajar bahwa satu spasi indentasi saja bisa membuat YAML tidak valid, dan hasil check yang jelas di PR mencegah perubahan yang rusak ikut ter-merge.
